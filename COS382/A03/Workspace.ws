@@ -1,0 +1,1 @@
+| p q r res |p := Polynomial new initialize: #(-7 5 3).q := Polynomial new initialize: #(1 2 3 4).r := Polynomial new initialize: #(0 -3).(p sum: q) inspect.(r sum: q) inspect.(p evaluate: 1.5) inspect.(r evaluate: 1.5) inspect.(q evaluate) inspect.(p differentiate) inspect.(q differentiate) inspect.p graphFrom: -10 graphTo: 10.r graphFrom: -20 graphTo: 20.

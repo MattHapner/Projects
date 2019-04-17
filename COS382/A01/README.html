@@ -1,0 +1,118 @@
+<meta charset="utf-8" lang="en">
+
+                **A01 - Language Recognition**
+
+
+General
+========
+
+For each of your team's implementations, explain the following (where appropriate and applicable):
+
+- details on calling conventions, input and output data formats, limitations, bugs, and special features.
+- negative aspects of your program (limitations, known bugs)
+- positive aspects (extensions, special features)
+- describe your choice of modularization (abstractions), data structures, and algorithms
+- explain anything you did that is likely to be different from what other students may have done
+- justify any design decisions for which the rationale isn't immediately clear
+
+Feel free to modify the structure of this `readme.html` file to fit the current assignment and to fit how you wish to present your findings.
+
+
+Student Info
+=============
+
+Your name: Matt Hapner
+
+Partner's name (if applicable):
+
+Which language(s) did you use:
+    1. C
+    2. Perl
+    3. Java (ANTLR4)
+
+Operating system: Ubuntu Subsystem for Windows
+
+Lab computer or your own computer:  Personal Computer
+
+TA's or Tutor's name (if received help):  N/A
+
+Did you receive help from your instructor?  Yes
+
+Preface
+===============
+
+Input file:
+--------------------------------
+The below picture is a picture of the test inputs I used to create the screenshots
+for each implementation. The top 10 scripture references are valid and the bottom 5
+are invalid. Each program will reflect this (unless it ignores white space, which would
+make lines 11 and 13 valid). Additionally, each program should accept lines
+9 and 10 as valid which are worth extra credit (Matt 2-3:3-1 is on line 9).
+All programs will run through the entire input file even if they encounter an exception,
+as specified in the assignment write-up.
+
+![Inputs used in each program](./screenshots/test_inputs.png)
+
+Implementations
+================
+
+C: Recursive Descent Parser
+--------------------------------
+
+<!-- Details and screenshots here -->
+The c implementation took the most time. The program accepts a file as the first argument
+in the command line and parses that file line by line using the lexical analyzer. Unfortunately,
+the lexical analyzer provided does not account for single digits - it returns the same for
+a single digit as it would a group of digits. Dr. Denning said that was acceptable, and we
+did not have to modify the lexer. My implementation does not print the reference when checking
+it's validity, but you can match it up to the input file above to verify that it is correct.
+
+![C Output](./screenshots/c.png)
+
+Java: ANTLR + Java Code in IntelliJ Project
+--------------------------------
+
+<!-- Details and screenshots here -->
+The ANTLR implementation was enjoyable for me. For this implementation, I chose to ignore
+whitespace like in the example code that Dr. Denning gave, so lines 11 and 13 would now be
+seen as valid. Lines 12, 14 and 15 would be the only invalid references, as the screenshot below
+reflects. This program runs output all the way through even if it runs into a problem.
+
+![ANTLR Output](./screenshots/antlr.png)
+
+Perl: RegEx Recognizer
+--------------------------------
+
+<!-- Details and screenshots here -->
+Writing the RegEx for the Perl implementation was quite enjoyable. I found myself really starting
+to get the hang of RegEx. Initially, I tried creating RegEx strings for each grammar rule, but
+eventually found it easier to write the RegEx in one statement (see below). I used
+[regex101.com](https://www.regex101.com) to help me test my RegEx against various inputs. Also,
+I built the program to allow for a file name to be inputted from the command line.
+
+Regex string: ^(\d( )+)?[a-zA-Z]+(( )+(\d+(:( )*\d+|,( )*\d+|;( )*\d+|-{1,2}( )*\d+|)*))?(( )+\([a-zA-Z]+\))?$
+
+![Perl Output](./screenshots/perl.png)
+
+
+Assignment Reflection
+======================
+
+Hours to complete assignment: Around 10
+
+List any other comments below.
+Feel free to provide any feedback on how much you learned from doing the assignment, and whether you enjoyed doing it.
+
+This assignment was more enjoyable for me than the first assignment, largely because I felt like I had
+a better idea of where I was going with the project. I really enjoyed freshening up on C and RegEx while at the
+same time learning about how syntax checking works. It now makes a little more sense why syntax errors
+can sometimes be super vague.
+
+
+<!--
+
+Leave the following, as this will format your text above to look nice.
+
+-->
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible");</script>

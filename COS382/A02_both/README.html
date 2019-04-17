@@ -1,0 +1,86 @@
+<meta charset="utf-8" lang="en">
+
+                **A02 - Language Translation**
+
+
+General
+========
+
+For each of your team's implementations, explain the following (where appropriate and applicable):
+
+- details on calling conventions, input and output data formats, limitations, bugs, and special features.
+- negative aspects of your program (limitations, known bugs)
+- positive aspects (extensions, special features)
+- describe your choice of modularization (abstractions), data structures, and algorithms
+- explain anything you did that is likely to be different from what other students may have done
+- justify any design decisions for which the rationale isn't immediately clear
+
+Feel free to modify the structure of this `readme.html` file to fit the current assignment and to fit how you wish to present your findings.
+
+
+Student Info
+=============
+
+Your name: Matt Hapner
+
+Partner's name (if applicable):
+
+Which language(s) did you use:
+    1. Java (ANTLR4)
+
+Operating system: Windows
+
+Lab computer or your own computer:  Personal Computer
+
+TA's or Tutor's name (if received help):  N/A
+
+Did you receive help from your instructor?  No
+
+Implementations
+================
+
+Recursive Descent Parser
+--------------------------------
+
+<!-- Details and screenshots here -->
+Unfortunately, with being sick and even with the time extension I was awarded, I was unable to finish the recursive descent parser. I hope to at some point potentially finish this part of the project.
+
+ANTLR + Java actions
+--------------------------------
+
+<!-- Details and screenshots here -->
+The ANTLR + Java actions segment of the assignment was the easiest for me. Adding simple semantics to grammar rules in ANTLR turned out to be easier than I had originally thought. I was able to accomplish 2 of the 3 extra credit problems during this section (adding line numbers and handling all real numbers). The below two screenshots show my input and output respectively for this section.
+
+![input](./screenshots/antlr_actions_input.png)
+
+![output](./screenshots/antlr_actions.png)
+
+ANTLR + Java inside a Visitor
+--------------------------------
+
+<!-- Details and screenshots here -->
+Figuring out, conceptually, how visitors work in ANTLR wasn't too difficult. Figuring out how to write that in code was another story. This section was much harder than just doing the actions in ANTLR, but I was still able to finish it. I understand the power of visitors and listeners and realize that they can accomplish much more than just in-line ANTLR actions. The below two screenshots show my input and output respectively for this section.
+
+![input](./screenshots/antlr_visitor_input.png)
+
+![output](./screenshots/antlr_visitor.png)
+
+
+Assignment Reflection
+======================
+
+Hours to complete assignment: Around 6
+
+List any other comments below.
+Feel free to provide any feedback on how much you learned from doing the assignment, and whether you enjoyed doing it.
+
+This assignment was enjoyable until I got to the visitor part. It would be helpful to have some guidance with the code on that part.
+
+
+<!--
+
+Leave the following, as this will format your text above to look nice.
+
+-->
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible");</script>
